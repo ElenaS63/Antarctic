@@ -1,0 +1,143 @@
+.header {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  background-color: transparent;
+
+  &--opened {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 89%;
+    height: 100vh;
+    background-color: $color-alice-blue;
+  }
+}
+
+.header__navigation {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 35px;
+  padding-bottom: 35px;
+
+  @media (max-width: $mobile-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.header__logo-link {
+  margin-right: auto;
+  color: $color-alice-blue;
+
+  @media (max-width: $tablet-width) {
+    svg {
+      width: 38px;
+      height: 20px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    svg {
+      width: 42px;
+      height: 22px;
+    }
+  }
+}
+
+.header__list {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  gap: 33px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @media (max-width: $tablet-width) {
+    gap: 23px;
+  }
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.header__button {
+  display: none;
+
+  @media (max-width: $mobile-width) {
+    position: absolute;
+    display: block;
+    top: 10px;
+    right: 7px;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+    }
+  }
+}
+
+.header--closed .header__button {
+  &::before {
+    top: 36%;
+    left: 21%;
+    width: 24px;
+    height: 2px;
+    background-color: $color-alice-blue;
+    box-shadow: 0 6px 0 0 $color-alice-blue, 0 12px 0 0 $color-alice-blue;
+  }
+}
+
+.header--opened .header__button {
+  &::before,
+  &::after {
+    top: 45%;
+    left: 25%;
+    width: 18px;
+    height: 1px;
+    background-color: $color-tangaroa;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.header--opened .header__logo-link {
+  color: $color-tangaroa;
+}
+
+.header--opened .header__list {
+  display: block;
+}
+
+.header__link {
+  display: block;
+  padding: 10px 0;
+
+  font-family: $ff-montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-alice-blue;
+
+  @media (max-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
