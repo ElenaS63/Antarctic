@@ -14,7 +14,6 @@
   // }
 
   @media (max-width: $mobile-width) {
-
     &.is-open {
       position: fixed;
       top: 0;
@@ -55,7 +54,6 @@
         color: $color-tangaroa;
         padding: 0;
       }
-
 
       .header__list {
         width: 100%;
@@ -220,6 +218,7 @@
 // }
 
 .header__link {
+  user-select: none;
   display: block;
   padding: 10px 0;
 

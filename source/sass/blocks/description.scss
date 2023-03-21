@@ -5,9 +5,11 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
 
+
+
   @media (max-width: $tablet-width) {
     padding-top: 90px;
-    padding-bottom: 100px;
+    padding-bottom: 93px;
     gap: 30px;
   }
 
@@ -16,6 +18,10 @@
     gap: 43px;
     padding-top: 55px;
     padding-bottom: 85px;
+
+    img {
+      width: 100%;
+    }
   }
 }
 
@@ -36,7 +42,7 @@
 
   h2 {
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 24px;
     font-weight: 600;
     font-size: 28px;
     line-height: 42px;
@@ -65,7 +71,7 @@
     padding-top: 9px;
   }
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $mobile-width) {
     padding: 0;
   }
 }
