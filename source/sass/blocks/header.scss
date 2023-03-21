@@ -1,16 +1,75 @@
 .header {
   width: 100%;
   position: absolute;
-  z-index: 2;
+  z-index: 10;
   background-color: transparent;
 
-  &--opened {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 89%;
-    height: 100vh;
-    background-color: $color-alice-blue;
+  // &--opened {
+  //   position: fixed;
+  //   top: 0;
+  //   right: 0;
+  //   width: 89%;
+  //   height: 100vh;
+  //   background-color: $color-alice-blue;
+  // }
+
+  @media (max-width: $mobile-width) {
+
+    &.is-open {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 89%;
+      height: 100vh;
+      background-color: $color-alice-blue;
+
+      .header__button {
+        top: 13px;
+        right: 2px;
+
+        &::before,
+        &::after {
+          top: 45%;
+          left: 25%;
+          width: 18px;
+          height: 1px;
+          background-color: $color-tangaroa;
+        }
+
+        &::before {
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
+
+      .header__navigation {
+        flex-direction: column;
+        min-width: 100%;
+        padding: 20px 15px;
+      }
+
+      .header__logo-link {
+        color: $color-tangaroa;
+        padding: 0;
+      }
+
+
+      .header__list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+        margin-top: 27px;
+        margin-left: 12px;
+      }
+
+      .header__link {
+        color: $color-tangaroa;
+      }
+    }
   }
 }
 
@@ -20,6 +79,11 @@
   align-items: flex-start;
   padding-top: 35px;
   padding-bottom: 35px;
+
+
+  @media (max-width: $tablet-width) {
+    padding-top: 23px;
+  }
 
   @media (max-width: $mobile-width) {
     padding-top: 0;
@@ -32,6 +96,8 @@
   color: $color-alice-blue;
 
   @media (max-width: $tablet-width) {
+    padding-top: 7px;
+
     svg {
       width: 38px;
       height: 20px;
@@ -84,46 +150,74 @@
       content: "";
       position: absolute;
     }
+
+    &::before {
+      top: 36%;
+      left: 21%;
+      width: 24px;
+      height: 2px;
+      background-color: $color-alice-blue;
+      box-shadow: 0 6px 0 0 $color-alice-blue, 0 12px 0 0 $color-alice-blue;
+    }
   }
 }
 
-.header--closed .header__button {
-  &::before {
-    top: 36%;
-    left: 21%;
-    width: 24px;
-    height: 2px;
-    background-color: $color-alice-blue;
-    box-shadow: 0 6px 0 0 $color-alice-blue, 0 12px 0 0 $color-alice-blue;
-  }
-}
+// .header--closed .header__button {
+//   &::before {
+//     top: 36%;
+//     left: 21%;
+//     width: 24px;
+//     height: 2px;
+//     background-color: $color-alice-blue;
+//     box-shadow: 0 6px 0 0 $color-alice-blue, 0 12px 0 0 $color-alice-blue;
+//   }
+// }
 
-.header--opened .header__button {
-  &::before,
-  &::after {
-    top: 45%;
-    left: 25%;
-    width: 18px;
-    height: 1px;
-    background-color: $color-tangaroa;
-  }
+// .header--opened .header__button {
+//   top:13px;
+//   right: 2px;
 
-  &::before {
-    transform: rotate(45deg);
-  }
+//   &::before,
+//   &::after {
+//     top: 45%;
+//     left: 25%;
+//     width: 18px;
+//     height: 1px;
+//     background-color: $color-tangaroa;
+//   }
 
-  &::after {
-    transform: rotate(-45deg);
-  }
-}
+//   &::before {
+//     transform: rotate(45deg);
+//   }
 
-.header--opened .header__logo-link {
-  color: $color-tangaroa;
-}
+//   &::after {
+//     transform: rotate(-45deg);
+//   }
+// }
 
-.header--opened .header__list {
-  display: block;
-}
+// .header--opened .header__navigation {
+//   flex-direction: column;
+//   min-width: 100%;
+//   padding: 20px 15px;
+// }
+
+// .header--opened .header__logo-link {
+//   color: $color-tangaroa;
+//   padding: 0;
+// }
+
+// .header--opened .header__list {
+//   width: 100%;
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   gap: 8px;
+//   margin-top: 27px;
+//   margin-left: 12px;
+// }
+
+// .header--opened .header__link {
+//   color: $color-tangaroa;
+// }
 
 .header__link {
   display: block;
@@ -139,5 +233,10 @@
   @media (max-width: $tablet-width) {
     font-size: 14px;
     line-height: 17px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 18px;
+    line-height: 22px;
   }
 }
