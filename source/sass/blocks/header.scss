@@ -239,3 +239,21 @@
     line-height: 22px;
   }
 }
+
+.header__logo-link,
+.header__link {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus-visible {
+    border-radius: 3px;
+    outline: none;
+    box-shadow: 0 0 12px $color-summer-sky;
+  }
+
+  &:active {
+    box-shadow: none;
+    opacity: 1;
+  }
+}
