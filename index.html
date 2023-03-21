@@ -55,7 +55,8 @@
         <picture>
           <source type="image/webp" media="(max-width: 767px)"
             srcset="./img/promo-mobile@1x.webp 1x, ./img/promo-mobile@2x.webp 2x">
-          <source media="(max-width: 1023px)" srcset="./img/promo-tablet@1x.webp 1x, ./img/promo-tablet@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 1023px)"
+            srcset="./img/promo-tablet@1x.webp 1x, ./img/promo-tablet@2x.webp 2x">
           <source type="image/webp" srcset="./img/promo-desktop@1x.webp 1x, ./img/promo-desktop@2x.webp 2x">
           <source media="(max-width: 767px)" srcset="./img/promo-mobile@1x.jpg 1x, ./img/promo-mobile@2x.jpg 2x">
           <source media="(max-width: 1023px)" srcset="./img/promo-tablet@1x.jpg 1x, ./img/promo-tablet@2x.jpg 2x">
@@ -79,7 +80,7 @@
             <source type="image/webp"
               srcset="./img/description-desktop@1x.webp 1x, ./img/description-desktop@2x.webp 2x">
             <img src="./img/description-desktop@1x.jpg" srcset="./img/description-desktop@2x.jpg 2x" width="560"
-              height="301" alt="Три пингвина с интересом смотрят на Вас.">
+              height="301" alt="Три пингвина.">
           </picture>
         </div>
       </section>
@@ -131,6 +132,61 @@
               </p>
             </li>
           </ul>
+        </div>
+      </section>
+      <section class="form">
+        <picture>
+          <source type="image/webp" media="(max-width: 767px)"
+            srcset="./img/form-mobile@1x.webp 1x, ./img/form-mobile@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 1023px)"
+            srcset="./img/form-tablet@1x.webp 1x, ./img/form-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="./img/form-desktop@1x.webp 1x, ./img/form-desktop@2x.webp 2x">
+          <source media="(max-width: 767px)" srcset="./img/form-mobile@1x.jpg 1x, ./img/form-mobile@2x.jpg 2x">
+          <source media="(max-width: 1023px)" srcset="./img/form-tablet@1x.jpg 1x, ./img/form-tablet@2x.jpg 2x">
+          <img src="./img/form-desktop@1x.jpg" srcset="./img/form-desktop@2x.jpg 2x" width="1366" height="555"
+            alt="Ледники Антарктики.">
+        </picture>
+        <div class="form__content container">
+          <div class="form__description">
+            <h2>Раннее бронирование</h2>
+            <p>Забронируйте тур за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
+          </div>
+          <div class="form__wrapper">
+            <form action="https://echo.htmlacademy.ru/" method="post">
+              <h3>Оставьте заявку и мы свяжемся с вами в ближайшее время</h3>
+              <div class="form__inputs-wrapper">
+                <div class="form__input form__input--name">
+                  <label for="name">
+                    <span class="visually-hidden">Поле для ввода имени</span>
+                    <input type="text" name="name" id="name" placeholder="Имя" required>
+                  </label>
+                </div>
+                <div class="form__input form__input--phone">
+                  <label for="phone">
+                    <span class="visually-hidden">Поле для ввода телефонного номера</span>
+                    <input type="tel" name="phone" id="phone" placeholder="Телефон" required>
+                  </label>
+                </div>
+                <div class="form__input form__input--email">
+                  <label for="email">
+                    <span class="visually-hidden">Поле для ввода адреса электронной почты</span>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                  </label>
+                </div>
+                <div class="form__input form__input--checkbox">
+                  <label for="agreement">
+                    <input type="checkbox" name="agreement" id="agreement" checked required>
+                    <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
+                  </label>
+                </div>
+                <div class="form__input form__input--submit">
+                  <button class="form__submit-button" type="submit">
+                    Оставить заявку
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
     </main>
