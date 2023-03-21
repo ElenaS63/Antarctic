@@ -84,10 +84,23 @@
         </div>
       </section>
       <section class="advantages" id="advantages">
-        <div class="advantages__content">
+        <picture>
+          <source type="image/webp" media="(max-width: 767px)"
+            srcset="./img/advantages-mobile@1x.webp 1x, ./img/advantages-mobile@2x.webp 2x">
+          <source media="(max-width: 1023px)"
+            srcset="./img/advantages-tablet@1x.webp 1x, ./img/advantages-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="./img/advantages-desktop@1x.webp 1x, ./img/advantages-desktop@2x.webp 2x">
+          <source media="(max-width: 767px)"
+            srcset="./img/advantages-mobile@1x.jpg 1x, ./img/advantages-mobile@2x.jpg 2x">
+          <source media="(max-width: 1023px)"
+            srcset="./img/advantages-tablet@1x.jpg 1x, ./img/advantages-tablet@2x.jpg 2x">
+          <img src="./img/advantages-desktop@1x.jpg" srcset="./img/advantages-desktop@2x.jpg 2x" width="1366"
+            height="650" alt="Побережье Антарктики.">
+        </picture>
+        <div class="advantages__content container">
           <h2>Преимущества</h2>
           <ul class="advantages__list">
-            <li class="advantages__item">
+            <li class="advantages__item advantages__item--liner">
               <svg aria-hidden="true" focusable="false" width="27" height="32">
                 <use href="./img/sprite.svg#icon-liner"></use>
               </svg>
@@ -97,17 +110,17 @@
                 и&nbsp;очередей и&nbsp;даст возможность насладиться видами и&nbsp;природой.
               </p>
             </li>
-            <li class="advantages__item">
+            <li class="advantages__item advantages__item--all">
               <svg aria-hidden="true" focusable="false" width="38" height="32">
                 <use href="./img/sprite.svg#icon-all-inclusive"></use>
               </svg>
-              <h3>Система все включено</h3>
+              <h3>Система все&nbsp;включено</h3>
               <p>
                 Все наши круизы работают по&nbsp;системе &laquo;Все Включено&raquo;. Великолепные блюда
                 и&nbsp;безлимитный бар доступны для вас 24&nbsp;часа.
               </p>
             </li>
-            <li class="advantages__item">
+            <li class="advantages__item advantages__item--boat">
               <svg aria-hidden="true" focusable="false" width="44" height="32">
                 <use href="./img/sprite.svg#icon-boat"></use>
               </svg>
@@ -121,8 +134,61 @@
         </div>
       </section>
     </main>
-    <footer>
-
+    <footer class="footer">
+      <nav class="footer__navigation container">
+        <a class="footer__logo-link" href="index.html">
+          <span class="visually-hidden">Заснеженные горы. Нажмите, чтобы перейти на главную страницу сайта</span>
+          <svg aria-hidden="true" focusable="false" width="70" height="38">
+            <use href="./img/sprite.svg#icon-logo"></use>
+          </svg>
+        </a>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link" href="#advantages">Преимущества</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Направления</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#cruises">Ближайшие круизы</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#contacts">Контакты</a>
+          </li>
+        </ul>
+        <ul class="footer__social-list">
+          <li class="footer__social-item">
+            <a class="footer__social-link footer__social-link--ok" href="#">
+              <span class="visually-hidden">
+                Перейти на страницу в социальной сеть Одноклассники
+              </span>
+              <svg aria-hidden="true" focusable="false" width="12" height="20">
+                <use href="./img/sprite.svg#icon-ok"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#">
+              <span class="visually-hidden">
+                Перейти на страницу на платформе Дзен
+              </span>
+              <svg aria-hidden="true" focusable="false" width="20" height="20">
+                <use href="./img/sprite.svg#icon-dzen"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#">
+              <span class="visually-hidden">
+                Перейти на страницу на платформе Реддит
+              </span>
+              <svg aria-hidden="true" focusable="false" width="20" height="20">
+                <use href="./img/sprite.svg#icon-reddit"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </footer>
   </div>
   <script src="js/vendor.min.js"></script>
