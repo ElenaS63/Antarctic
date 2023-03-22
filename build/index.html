@@ -151,32 +151,35 @@
             <h2>Раннее бронирование</h2>
             <p>Забронируйте тур за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
           </div>
-          <div class="form__wrapper">
+          <div class="form__wrapper" data-form-validate data-callback="base">
             <form action="https://echo.htmlacademy.ru/" method="post">
-              <h3>Оставьте заявку и мы свяжемся с вами в ближайшее время</h3>
+              <h3>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</h3>
               <div class="form__inputs-wrapper">
-                <div class="form__input form__input--name">
+                <div class="form__input form__input--name" data-validate-type="text" data-required
+                data-message-base="Поле обязательно к заполнению">
                   <label for="name">
                     <span class="visually-hidden">Поле для ввода имени</span>
                     <input type="text" name="name" id="name" placeholder="Имя" required>
                   </label>
                 </div>
-                <div class="form__input form__input--phone">
+                <div class="form__input form__input--phone" data-validate-type="phone" data-required
+                data-message-base="Поле обязательно к заполнению">
                   <label for="phone">
                     <span class="visually-hidden">Поле для ввода телефонного номера</span>
                     <input type="tel" name="phone" id="phone" placeholder="Телефон" required>
                   </label>
                 </div>
-                <div class="form__input form__input--email">
+                <div class="form__input form__input--email" data-validate-type="email" data-required
+                data-message-base="Поле обязательно к заполнению">
                   <label for="email">
                     <span class="visually-hidden">Поле для ввода адреса электронной почты</span>
                     <input type="email" name="email" id="email" placeholder="Email" required>
                   </label>
                 </div>
-                <div class="form__input form__input--checkbox">
+                <div class="form__input form__input--checkbox" data-validate-type="checkbox" data-required>
                   <label for="agreement">
                     <input type="checkbox" name="agreement" id="agreement" checked required>
-                    <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
+                    <span>Я&nbsp;согласен на&nbsp;обработку моих&nbsp;персональных данных</span>
                   </label>
                 </div>
                 <div class="form__input form__input--submit">

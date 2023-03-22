@@ -10,6 +10,7 @@
     height: 100%;
     object-fit: cover;
     position: absolute;
+    object-position: 50% 100%;
   }
 }
 
@@ -18,7 +19,7 @@
   padding: 50px 163px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  align-items: center;
+  align-items: flex-start;
 
   font-family: $ff-montserrat;
   font-style: normal;
@@ -26,48 +27,119 @@
   font-size: 18px;
   line-height: 27px;
   color: $color-tangaroa;
+
+  @media (max-width: $tablet-width) {
+    padding: 88px 163px 100px;
+    grid-template-columns: 1fr;
+    gap: 52px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 60px;
+    padding-bottom: 65px;
+    gap: 32px;
+  }
 }
 
 .form__description {
+  padding-top: 163px;
+  margin-right: 20px;
+
   h2 {
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 9px;
     font-weight: 700;
     font-size: 40px;
-    line-height: 60x;
+    line-height: 60px;
+
+    @media (max-width: $tablet-width) {
+      margin-bottom: 4px;
+      font-size: 34px;
+      line-height: 51px;
+    }
+
+    @media (max-width: $mobile-width) {
+      margin-bottom: 11px;
+      font-size: 24px;
+      line-height: 32px;
+      text-align: center;
+    }
   }
 
   p {
     margin: 0;
+    max-width: 352px;
+
+    @media (max-width: $tablet-width) {
+      text-align: center;
+    }
+
+    @media (max-width: $mobile-width) {
+      max-width: 257px;
+      font-size: 16px;
+      line-height: 23px;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-right: 0;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
 .form__wrapper {
   width: 403px;
-  padding: 50px;
+  padding: 45px 50px 50px;
   margin-left: auto;
   background-color: $color-tangaroa;
 
   h3 {
     margin: 0;
-    margin-bottom: 35px;
+    margin-bottom: 26px;
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;
     color: $color-alice-blue;
+
+    @media (max-width: $mobile-width) {
+      line-height: 26px;
+      text-align: center;
+    }
   }
 
   span {
     font-size: 10px;
     line-height: 13px;
     color: $color-alice-blue;
+
+    @media (max-width: $mobile-width) {
+      line-height: 12px;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-right: auto;
+    transform: translateX(-2px);
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    transform: translateX(-1px);
+    padding: 34px 30px 40px;
   }
 }
 
 .form__inputs-wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
+  gap: 19px;
+
+  @media (max-width: $mobile-width) {
+    gap: 20px;
+  }
 }
 
 .form__input {
@@ -75,11 +147,17 @@
   line-height: 21px;
   color: $color-tangaroa;
 
+  &.is-invalid {
+    span {
+      color: $color-torch-red;
+    }
+  }
+
   input:not([type="checkbox"]) {
     width: 100%;
     background-color: $color-alice-blue;
     border: none;
-    padding: 11px 16px;
+    padding: 14px 16px;
 
     &::placeholder {
       color: $color-tangaroa-accent;
@@ -96,11 +174,66 @@
       background-color: $color-summer-sky;
       color: $color-alice-blue;
     }
+
+    @media (max-width: $mobile-width) {
+      padding-bottom: 13px;
+    }
   }
 
   &--checkbox {
     label {
       display: flex;
+      align-items: center;
+    }
+
+    input {
+      cursor: pointer;
+      flex-shrink: 0;
+      position: relative;
+      appearance: none;
+      display: block;
+      width: 18px;
+      height: 18px;
+      margin-right: auto;
+      background-color: $color-alice-blue;
+
+      &:checked {
+        &::after {
+          content: "";
+          position: absolute;
+          left: 36%;
+          top: 12%;
+          width: 6px;
+          height: 10px;
+          border: solid $color-sapphire;
+          border-width: 0 1px 1px 0;
+          transform: rotate(45deg);
+        }
+      }
+
+      &:hover,
+      &:focus-visible {
+        outline-color: $color-summer-sky;
+        box-shadow: 0 0 12px $color-alice-blue;
+      }
+
+      @media (max-width: $mobile-width) {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+      }
+    }
+
+    @media (max-width: $mobile-width) {
+      margin-top: -2px;
+    }
+  }
+
+  &--submit {
+    padding-top: 11px;
+
+    @media (max-width: $mobile-width) {
+      padding-top: 8px;
     }
   }
 }
@@ -108,13 +241,14 @@
 .form__submit-button {
   user-select: none;
   width: 100%;
-  padding: 11px 40px 10px;
+  padding: 11px 40px;
   display: inline-block;
   border: none;
   cursor: pointer;
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
+  color: $color-tangaroa;
   background-color: $color-alice-blue;
 
   &:hover {
