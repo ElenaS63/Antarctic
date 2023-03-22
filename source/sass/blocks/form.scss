@@ -184,10 +184,10 @@
     label {
       display: flex;
       align-items: center;
+      cursor: pointer;
     }
 
     input {
-      cursor: pointer;
       flex-shrink: 0;
       position: relative;
       appearance: none;

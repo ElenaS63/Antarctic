@@ -32,7 +32,7 @@
   font-size: 20px;
   line-height: 25px;
   color: $color-alice-blue;
-  text-shadow: 0px 4px 4px $color-silver;
+  text-shadow: 0 4px 4px $color-silver;
 
   @media (max-width: $tablet-width) {
     padding-top: 267px;

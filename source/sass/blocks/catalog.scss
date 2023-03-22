@@ -1,0 +1,143 @@
+.catalog {
+  padding-top: 95px;
+  padding-bottom: 120px;
+  font-family: $ff-montserrat;
+  font-style: normal;
+
+  h2 {
+    margin: 0;
+    margin-bottom: 60px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+    color: $color-tangaroa;
+    text-align: center;
+  }
+}
+
+.catalog__list {
+  margin: 0;
+  padding: 0 15px;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.catalog__item-content {
+  position: relative;
+  color: $color-alice-blue;
+  height: 386px;
+}
+
+.catalog__item-description {
+  display: flex;
+  height: 100%;
+
+  h3 {
+    margin: 0;
+    padding: 0 48px 23px 30px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    align-self: flex-end;
+  }
+
+  dl {
+    margin: 0;
+    display: none;
+  }
+
+  dt {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  dd {
+    margin: 0;
+    margin-bottom: 12px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: $color-quartz;
+  }
+}
+
+.catalog__link {
+  user-select: none;
+  width: 100%;
+  display: none;
+  padding: 9px 25px;
+  background-color: $color-alice-blue;
+  color: $color-tangaroa;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.catalog__item {
+  position: relative;
+  height: 386px;
+  background-color: $color-tangaroa;
+
+  img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    outline: none;
+    box-shadow: 0 0 25px $color-summer-sky;
+    padding: 28px 25px 35px;
+
+    img {
+      display: none;
+    }
+
+    .catalog__item-description {
+      overflow-y: scroll;
+      max-height: 270px;
+      flex-direction: column;
+    }
+
+    h3 {
+      padding: 0;
+      margin-bottom: 15px;
+      align-self: start;
+    }
+
+    dl {
+
+      display: block;
+    }
+
+    .catalog__link {
+      margin-top: 13px;
+      display: inline-block;
+
+      &:hover {
+        box-shadow: 0 0 12px $color-alice-blue;
+      }
+
+      &:focus-visible {
+        outline-color: $color-summer-sky;
+        box-shadow: 0 0 12px $color-alice-blue;
+        border-radius: 3px;
+      }
+
+      &:active {
+        border-radius: 3px;
+        background-color: $color-summer-sky;
+        color: $color-alice-blue;
+      }
+    }
+  }
+}
