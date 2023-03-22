@@ -100,7 +100,8 @@
 
   @media (max-width: $mobile-width) {
     justify-content: flex-start;
-    transform: translateX(-6px);
+    transform: translateX(-5px);
+    gap: 16px;
   }
 }
 
