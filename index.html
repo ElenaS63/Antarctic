@@ -22,7 +22,7 @@
 
 <body>
   <div class="wrapper">
-    <header class="header">
+    <header class="header nojs" data-menu>
       <nav class="header__navigation container">
         <a class="header__logo-link" href="index.html">
           <span class="visually-hidden">Заснеженные горы. Нажмите, чтобы перейти на главную страницу сайта</span>
@@ -30,21 +30,21 @@
             <use href="./img/sprite.svg#icon-logo"></use>
           </svg>
         </a>
-        <button class="header__button" type="button">
+        <button class="header__button" type="button" data-menu-button>
           <span class="visually-hidden">Открыть/закрыть меню</span>
         </button>
         <ul class="header__list">
           <li class="header__item">
-            <a class="header__link" href="#advantages">Преимущества</a>
+            <a class="header__link" href="#advantages" data-menu-button>Преимущества</a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="#!">Направления</a>
+            <a class="header__link" href="#!" data-menu-button>Направления</a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="#catalog">Ближайшие круизы</a>
+            <a class="header__link" href="#catalog" data-menu-button>Ближайшие круизы</a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="#contacts">Контакты</a>
+            <a class="header__link" href="#contacts" data-menu-button>Контакты</a>
           </li>
         </ul>
       </nav>
