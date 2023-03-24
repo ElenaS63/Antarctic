@@ -114,6 +114,8 @@
 }
 
 .contacts__link {
+  user-select: none;
+
   &:hover {
     opacity: 0.6;
   }

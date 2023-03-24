@@ -437,7 +437,6 @@ html {
   line-height: 24px;
   font-family: "Placeholder", "Arial", sans-serif;
   color: #000000;
-  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -558,6 +557,14 @@ button,
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll-lock {
+  overflow: hidden;
 }
 
 .wrapper {
@@ -2007,6 +2014,13 @@ button,
   flex-shrink: 0;
 }
 
+.contacts__link {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .contacts__link:hover {
   opacity: 0.6;
 }
@@ -2430,22 +2444,44 @@ button,
     width: 100%;
   }
 
-  .header.is-open {
+  .header.nojs {
+    position: relative;
+    background-color: #011c40;
+  }
+
+  .header.nojs .header__button {
+    display: none;
+  }
+
+  .header.nojs .header__navigation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .header.nojs .header__list {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .header.open {
     position: fixed;
     top: 0;
     right: 0;
     width: 89%;
-    height: 100vh;
+    height: calc(100vh - 55px);
     background-color: #f9fbfd;
   }
 
-  .header.is-open .header__button {
+  .header.open .header__button {
     top: 13px;
     right: 2px;
   }
 
-  .header.is-open .header__button::before,
-  .header.is-open .header__button::after {
+  .header.open .header__button::before,
+  .header.open .header__button::after {
     top: 45%;
     left: 25%;
     width: 18px;
@@ -2453,19 +2489,19 @@ button,
     background-color: #011c40;
   }
 
-  .header.is-open .header__button::before {
+  .header.open .header__button::before {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
 
-  .header.is-open .header__button::after {
+  .header.open .header__button::after {
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
 
-  .header.is-open .header__navigation {
+  .header.open .header__navigation {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -2474,12 +2510,12 @@ button,
     padding: 20px 15px;
   }
 
-  .header.is-open .header__logo-link {
+  .header.open .header__logo-link {
     color: #011c40;
     padding: 0;
   }
 
-  .header.is-open .header__list {
+  .header.open .header__list {
     width: 100%;
     display: -ms-grid;
     display: grid;
@@ -2490,7 +2526,7 @@ button,
     margin-left: 12px;
   }
 
-  .header.is-open .header__link {
+  .header.open .header__link {
     color: #011c40;
   }
 

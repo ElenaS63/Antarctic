@@ -4,22 +4,33 @@
   z-index: 10;
   background-color: transparent;
 
-  // &--opened {
-  //   position: fixed;
-  //   top: 0;
-  //   right: 0;
-  //   width: 89%;
-  //   height: 100vh;
-  //   background-color: $color-alice-blue;
-  // }
-
   @media (max-width: $mobile-width) {
-    &.is-open {
+    &.nojs {
+      position: relative;
+      background-color: $color-tangaroa;
+
+      .header__button {
+        display: none;
+      }
+
+      .header__navigation {
+        flex-direction: column;
+      }
+
+      .header__list {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+
+    &.open {
       position: fixed;
       top: 0;
       right: 0;
       width: 89%;
-      height: 100vh;
+      height: calc(100vh - 55px);
       background-color: $color-alice-blue;
 
       .header__button {
@@ -159,63 +170,6 @@
     }
   }
 }
-
-// .header--closed .header__button {
-//   &::before {
-//     top: 36%;
-//     left: 21%;
-//     width: 24px;
-//     height: 2px;
-//     background-color: $color-alice-blue;
-//     box-shadow: 0 6px 0 0 $color-alice-blue, 0 12px 0 0 $color-alice-blue;
-//   }
-// }
-
-// .header--opened .header__button {
-//   top:13px;
-//   right: 2px;
-
-//   &::before,
-//   &::after {
-//     top: 45%;
-//     left: 25%;
-//     width: 18px;
-//     height: 1px;
-//     background-color: $color-tangaroa;
-//   }
-
-//   &::before {
-//     transform: rotate(45deg);
-//   }
-
-//   &::after {
-//     transform: rotate(-45deg);
-//   }
-// }
-
-// .header--opened .header__navigation {
-//   flex-direction: column;
-//   min-width: 100%;
-//   padding: 20px 15px;
-// }
-
-// .header--opened .header__logo-link {
-//   color: $color-tangaroa;
-//   padding: 0;
-// }
-
-// .header--opened .header__list {
-//   width: 100%;
-//   display: grid;
-//   grid-template-columns: 1fr;
-//   gap: 8px;
-//   margin-top: 27px;
-//   margin-left: 12px;
-// }
-
-// .header--opened .header__link {
-//   color: $color-tangaroa;
-// }
 
 .header__link {
   user-select: none;
