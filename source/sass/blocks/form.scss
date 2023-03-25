@@ -31,7 +31,7 @@
   @media (max-width: $tablet-width) {
     padding: 88px 163px 100px;
     grid-template-columns: 1fr;
-    gap: 52px;
+    gap: 53px;
   }
 
   @media (max-width: $mobile-width) {
@@ -44,6 +44,14 @@
 .form__description {
   padding-top: 163px;
   margin-right: 20px;
+
+  br {
+    display: none;
+
+    @media (max-width: $mobile-width) {
+      display: block;
+    }
+  }
 
   h2 {
     margin: 0;
@@ -59,7 +67,7 @@
     }
 
     @media (max-width: $mobile-width) {
-      margin-bottom: 11px;
+      margin-bottom: 10px;
       font-size: 24px;
       line-height: 32px;
       text-align: center;
@@ -122,12 +130,10 @@
 
   @media (max-width: $tablet-width) {
     margin-right: auto;
-    transform: translateX(-2px);
   }
 
   @media (max-width: $mobile-width) {
     width: 100%;
-    transform: translateX(-1px);
     padding: 34px 30px 40px;
   }
 }

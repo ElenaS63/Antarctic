@@ -24,13 +24,12 @@
       }
     }
 
-
     &.open {
       position: fixed;
       top: 0;
       right: 0;
       width: 89%;
-      height: calc(100vh - 55px);
+      height: 100vh;
       background-color: $color-alice-blue;
 
       .header__button {
@@ -85,6 +84,7 @@
 .header__navigation {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   padding-top: 35px;
   padding-bottom: 35px;
@@ -171,11 +171,22 @@
   }
 }
 
+.header__item {
+  max-width: 170px;
+
+  @media (max-width: $tablet-width) {
+    max-width: 150px;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 100%;
+  }
+}
+
 .header__link {
   user-select: none;
   display: block;
   padding: 10px 0;
-
   font-family: $ff-montserrat;
   font-style: normal;
   font-weight: 500;

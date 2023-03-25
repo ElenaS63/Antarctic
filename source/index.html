@@ -8,7 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Незабываемые круизы в Антарктику">
   <meta name="keywords" content="Круиз, тур, отпуск, Антарктика">
-
   <link rel="preload" href="./fonts/montserrat-bold.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/montserrat-medium.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/montserrat-regular.woff2" as="font" crossorigin="anonymous">
@@ -18,18 +17,19 @@
   <link rel="icon" href="./favicon/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./favicon/apple-icon-180x180.png">
   <link rel="manifest" href="./favicon/manifest.webmanifest">
+  <meta name="msapplication-TileColor" content="#101a56">
+  <meta name="theme-color" content="#ffffff">
 </head>
-
 <body>
   <div class="wrapper">
     <header class="header nojs" data-menu>
       <nav class="header__navigation container">
-        <a class="header__logo-link" href="index.html">
-          <span class="visually-hidden">Заснеженные горы. Нажмите, чтобы перейти на главную страницу сайта</span>
-          <svg aria-hidden="true" focusable="false" width="70" height="38">
-            <use href="./img/sprite.svg#icon-logo"></use>
-          </svg>
-        </a>
+          <a class="header__logo-link" href="index.html">
+            <span class="visually-hidden">Заснеженные горы. Нажмите, чтобы перейти на главную страницу сайта</span>
+            <svg aria-hidden="true" focusable="false" width="70" height="38">
+              <use href="./img/sprite.svg#icon-logo"></use>
+            </svg>
+          </a>
         <button class="header__button" type="button" data-menu-button>
           <span class="visually-hidden">Открыть/закрыть меню</span>
         </button>
@@ -65,7 +65,7 @@
         </picture>
         <div class="promo__description-wrapper container">
           <h2>Круизы в&nbsp;Антарктику</h2>
-          <p>Волшебный мир айсбергов и&nbsp;пингвинов</p>
+          <p>Волшебный мир айсбергов&nbsp;и&nbsp;пингвинов</p>
         </div>
       </section>
       <section class="description container">
@@ -126,7 +126,7 @@
               <h3>Система все&nbsp;включено</h3>
               <p>
                 Все наши круизы работают по&nbsp;системе &laquo;Все Включено&raquo;. Великолепные блюда
-                и&nbsp;безлимитный бар доступны для вас 24&nbsp;часа.
+                и&nbsp;безлимитный бар доступны для&nbsp;вас 24&nbsp;часа.
               </p>
             </li>
             <li class="advantages__item advantages__item--boat">
@@ -317,8 +317,8 @@
                 srcset="./img/catalog/aurora-mobile@1x.jpg 1x, ./img/catalog/aurora-mobile@2x.jpg 2x">
               <source media="(max-width: 1023px)"
                 srcset="./img/catalog/aurora-tablet@1x.jpg 1x, ./img/catalog/aurora-tablet@2x.jpg 2x">
-              <img src="./img/catalog/aurora-desktop@1x.jpg" srcset="./img/catalog/aurora-desktop@2x.jpg 2x"
-                width="260" height="386" alt="Круиз Аврора.">
+              <img src="./img/catalog/aurora-desktop@1x.jpg" srcset="./img/catalog/aurora-desktop@2x.jpg 2x" width="260"
+                height="386" alt="Круиз Аврора.">
             </picture>
             <div class="catalog__item-content">
               <div class="catalog__item-description">
@@ -349,8 +349,8 @@
                 srcset="./img/catalog/leonor-mobile@1x.jpg 1x, ./img/catalog/leonor-mobile@2x.jpg 2x">
               <source media="(max-width: 1023px)"
                 srcset="./img/catalog/leonor-tablet@1x.jpg 1x, ./img/catalog/leonor-tablet@2x.jpg 2x">
-              <img src="./img/catalog/leonor-desktop@1x.jpg" srcset="./img/catalog/leonor-desktop@2x.jpg 2x"
-                width="260" height="386" alt="Круиз Леонор.">
+              <img src="./img/catalog/leonor-desktop@1x.jpg" srcset="./img/catalog/leonor-desktop@2x.jpg 2x" width="260"
+                height="386" alt="Круиз Леонор.">
             </picture>
             <div class="catalog__item-content">
               <div class="catalog__item-description">
@@ -381,8 +381,8 @@
                 srcset="./img/catalog/minion-mobile@1x.jpg 1x, ./img/catalog/minion-mobile@2x.jpg 2x">
               <source media="(max-width: 1023px)"
                 srcset="./img/catalog/minion-tablet@1x.jpg 1x, ./img/catalog/minion-tablet@2x.jpg 2x">
-              <img src="./img/catalog/minion-desktop@1x.jpg" srcset="./img/catalog/minion-desktop@2x.jpg 2x"
-                width="260" height="386" alt="Круиз Минион.">
+              <img src="./img/catalog/minion-desktop@1x.jpg" srcset="./img/catalog/minion-desktop@2x.jpg 2x" width="260"
+                height="386" alt="Круиз Минион.">
             </picture>
             <div class="catalog__item-content">
               <div class="catalog__item-description">
@@ -418,7 +418,7 @@
         <div class="form__content container">
           <div class="form__description">
             <h2>Раннее бронирование</h2>
-            <p>Забронируйте тур за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
+            <p>Забронируйте тур <br> за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
           </div>
           <div class="form__wrapper" data-form-validate data-callback="base">
             <form action="https://echo.htmlacademy.ru/" method="post">
@@ -480,7 +480,7 @@
             Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.
           </h2>
           <ul class="contacts__list">
-            <li class="contacts__item">
+            <li class="contacts__item contacts__item--adress">
               <svg aria-hidden="true" focusable="false" width="18" height="22">
                 <use href="./img/sprite.svg#icon-map-pin"></use>
               </svg>
@@ -492,7 +492,7 @@
                 <svg aria-hidden="true" focusable="false" width="18" height="18">
                   <use href="./img/sprite.svg#icon-phone"></use>
                 </svg>
-                <span class="visually-hidden">Позвонить нам по номеру</span>
+                <span class="visually-hidden">Позвонить нам по номеру телефона</span>
                 <span>8-800-200-00-00</span>
               </a>
             </li>
@@ -502,12 +502,12 @@
     </main>
     <footer class="footer">
       <nav class="footer__navigation container">
-        <a class="footer__logo-link" href="index.html">
-          <span class="visually-hidden">Заснеженные горы. Нажмите, чтобы перейти на главную страницу сайта</span>
-          <svg aria-hidden="true" focusable="false" width="70" height="38">
-            <use href="./img/sprite.svg#icon-logo"></use>
-          </svg>
-        </a>
+          <a class="footer__logo-link" href="index.html">
+            <span class="visually-hidden">Заснеженные горы. Нажмите, чтобы перейти на главную страницу сайта</span>
+            <svg aria-hidden="true" focusable="false" width="70" height="38">
+              <use href="./img/sprite.svg#icon-logo"></use>
+            </svg>
+          </a>
         <ul class="footer__list">
           <li class="footer__item">
             <a class="footer__link" href="#advantages">Преимущества</a>
@@ -524,7 +524,7 @@
         </ul>
         <ul class="footer__social-list">
           <li class="footer__social-item">
-            <a class="footer__social-link footer__social-link--ok" href="#">
+            <a class="footer__social-link footer__social-link--ok" href="#!">
               <span class="visually-hidden">
                 Перейти на страницу в социальной сеть Одноклассники
               </span>
@@ -534,7 +534,7 @@
             </a>
           </li>
           <li class="footer__social-item">
-            <a class="footer__social-link" href="#">
+            <a class="footer__social-link" href="#!">
               <span class="visually-hidden">
                 Перейти на страницу на платформе Дзен
               </span>
@@ -544,7 +544,7 @@
             </a>
           </li>
           <li class="footer__social-item">
-            <a class="footer__social-link" href="#">
+            <a class="footer__social-link" href="#!">
               <span class="visually-hidden">
                 Перейти на страницу на платформе Реддит
               </span>

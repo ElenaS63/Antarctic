@@ -18,7 +18,7 @@
     height: 100%;
     object-fit: cover;
     position: absolute;
-    object-position: 50% 97%;
+    object-position: 50% 100%;
   }
 }
 
@@ -58,6 +58,7 @@
     }
 
     @media (max-width: $mobile-width) {
+      margin-bottom: 11px;
       font-size: 36px;
       line-height: 45px;
     }
