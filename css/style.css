@@ -1666,7 +1666,7 @@ html {
 .catalog__item:hover .catalog__item-description,
 .catalog__item:focus .catalog__item-description,
 .catalog__item:focus-within .catalog__item-description {
-  overflow-y: scroll;
+  overflow: scroll;
   scrollbar-width: none;
   max-height: 290px;
   display: -webkit-box;
