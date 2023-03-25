@@ -563,10 +563,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.scroll-lock {
-  overflow: hidden;
-}
-
 .wrapper {
   position: relative;
   display: -webkit-box;
@@ -1319,6 +1315,8 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
@@ -1346,6 +1344,10 @@ html {
 
 .header__button {
   display: none;
+}
+
+.header__item {
+  max-width: 170px;
 }
 
 .header__link {
@@ -1400,8 +1402,8 @@ html {
   -o-object-fit: cover;
   object-fit: cover;
   position: absolute;
-  -o-object-position: 50% 97%;
-  object-position: 50% 97%;
+  -o-object-position: 50% 100%;
+  object-position: 50% 100%;
 }
 
 .promo__description-wrapper {
@@ -1537,7 +1539,7 @@ html {
 }
 
 .catalog {
-  padding-top: 95px;
+  padding-top: 85px;
   padding-bottom: 120px;
   font-family: "Montserrat", "Verdana", sans-serif;
   font-style: normal;
@@ -1545,7 +1547,7 @@ html {
 
 .catalog h2 {
   margin: 0;
-  margin-bottom: 60px;
+  margin-bottom: 49px;
   font-weight: 600;
   font-size: 28px;
   line-height: 42px;
@@ -1571,9 +1573,8 @@ html {
 }
 
 .catalog__item-description {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
   height: 100%;
 }
 
@@ -1584,7 +1585,8 @@ html {
   font-size: 18px;
   line-height: 27px;
   -ms-flex-item-align: end;
-  align-self: flex-end;
+  -ms-grid-row-align: end;
+  align-self: end;
 }
 
 .catalog__item-description dl {
@@ -1637,6 +1639,8 @@ html {
   height: 100%;
   top: 0;
   left: 0;
+  -o-object-position: 50% 100%;
+  object-position: 50% 100%;
 }
 
 .catalog__item:hover,
@@ -1663,19 +1667,21 @@ html {
 .catalog__item:focus .catalog__item-description,
 .catalog__item:focus-within .catalog__item-description {
   overflow-y: scroll;
+  scrollbar-width: none;
   max-height: 290px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  /* stylelint-disable */
-  /* stylelint-enable */
 }
 
 .catalog__item:hover .catalog__item-description::-webkit-scrollbar,
 .catalog__item:focus .catalog__item-description::-webkit-scrollbar,
 .catalog__item:focus-within .catalog__item-description::-webkit-scrollbar {
-  width: 0;
+  display: none;
 }
 
 .catalog__item:hover h3,
@@ -1764,6 +1770,10 @@ html {
 .form__description {
   padding-top: 163px;
   margin-right: 20px;
+}
+
+.form__description br {
+  display: none;
 }
 
 .form__description h2 {
@@ -1975,7 +1985,7 @@ html {
   line-height: 24px;
   color: #011c40;
   padding-top: 75px;
-  padding-left: 62px;
+  padding-left: 65px;
 }
 
 .contacts__text h2 {
@@ -2044,16 +2054,18 @@ html {
 }
 
 .footer__navigation {
-  padding-top: 50px;
-  padding-bottom: 43px;
+  max-width: 1250px;
+  padding: 50px 45px 43px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .footer__logo-link {
   color: #f9fbfd;
-  margin-right: 38px;
+  margin-right: 40px;
 }
 
 .footer__list,
@@ -2070,8 +2082,12 @@ html {
   -ms-grid-columns: (max-content)[4];
   grid-template-columns: repeat(4, -webkit-max-content);
   grid-template-columns: repeat(4, max-content);
-  gap: 6.6%;
+  gap: 33px;
   margin-right: auto;
+}
+
+.footer__item {
+  max-width: 170px;
 }
 
 .footer__link {
@@ -2091,6 +2107,7 @@ html {
 }
 
 .footer__social-list {
+  max-width: 120px;
   margin-top: 7px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2101,6 +2118,9 @@ html {
   -ms-flex-pack: end;
   justify-content: flex-end;
   gap: 15px;
+  -webkit-transform: translateX(3px);
+  -ms-transform: translateX(3px);
+  transform: translateX(3px);
 }
 
 .footer__social-link {
@@ -2204,6 +2224,10 @@ html {
     gap: 23px;
   }
 
+  .header__item {
+    max-width: 150px;
+  }
+
   .header__link {
     font-size: 14px;
     line-height: 17px;
@@ -2234,6 +2258,10 @@ html {
     gap: 30px;
   }
 
+  .description__image {
+    padding-top: 9px;
+  }
+
   .description__text {
     padding: 0;
   }
@@ -2243,10 +2271,6 @@ html {
     margin-right: 30px;
     font-size: 26px;
     line-height: 37px;
-  }
-
-  .description__image {
-    padding-top: 9px;
   }
 
   .advantages {
@@ -2297,14 +2321,24 @@ html {
     margin-bottom: 18px;
   }
 
+  .catalog h2 {
+    font-size: 26px;
+    line-height: 39px;
+  }
+
   .catalog {
-    padding-top: 100px;
+    padding-top: 90px;
     padding-bottom: 100px;
   }
 
   .catalog__list {
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .catalog__item-description h3 {
+    padding-left: 35px;
+    padding-bottom: 27px;
   }
 
   .catalog__item:hover .catalog__item-content,
@@ -2318,7 +2352,7 @@ html {
     padding: 88px 163px 100px;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    gap: 52px;
+    gap: 53px;
   }
 
   .form__description h2 {
@@ -2348,9 +2382,6 @@ html {
 
   .form__wrapper {
     margin-right: auto;
-    -webkit-transform: translateX(-2px);
-    -ms-transform: translateX(-2px);
-    transform: translateX(-2px);
   }
 
   .contacts {
@@ -2378,11 +2409,15 @@ html {
 
   .contacts__item svg,
   .contacts__link svg {
-    margin-top: 3px;
+    margin-top: 2px;
   }
 
   .contacts__item {
     padding-right: 35px;
+  }
+
+  .contacts__item--adress svg {
+    margin-top: 4px;
   }
 
   .footer__logo-link svg {
@@ -2391,11 +2426,15 @@ html {
   }
 
   .footer__logo-link {
-    margin-right: 23px;
+    margin-right: 26px;
   }
 
   .footer__list {
     gap: 23px;
+  }
+
+  .footer__item {
+    max-width: 150px;
   }
 
   .footer__link {
@@ -2471,7 +2510,7 @@ html {
     top: 0;
     right: 0;
     width: 89%;
-    height: calc(100vh - 55px);
+    height: 100vh;
     background-color: #f9fbfd;
   }
 
@@ -2576,6 +2615,10 @@ html {
     box-shadow: 0 6px 0 0 #f9fbfd, 0 12px 0 0 #f9fbfd;
   }
 
+  .header__item {
+    max-width: 100%;
+  }
+
   .header__link {
     font-size: 18px;
     line-height: 22px;
@@ -2591,6 +2634,7 @@ html {
   }
 
   .promo__description-wrapper h2 {
+    margin-bottom: 11px;
     font-size: 36px;
     line-height: 45px;
   }
@@ -2604,18 +2648,18 @@ html {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     gap: 43px;
-    padding-top: 55px;
+    padding-top: 57px;
     padding-bottom: 85px;
+  }
+
+  .description__image {
+    padding: 0;
   }
 
   .description__text h2 {
     margin-bottom: 15px;
     font-size: 24px;
     line-height: 34px;
-  }
-
-  .description__image {
-    padding: 0;
   }
 
   .advantages {
@@ -2650,20 +2694,39 @@ html {
   }
 
   .catalog h2 {
+    margin-bottom: 30px;
     font-size: 24px;
     line-height: 36px;
   }
 
   .catalog {
-    margin-bottom: 40px;
-    padding-top: 65px;
+    padding-top: 57px;
     padding-bottom: 65px;
   }
 
   .catalog__list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    padding: 0;
+    padding: 0 10px;
+  }
+
+  .catalog__item-description h3 {
+    padding-left: 25px;
+    padding-bottom: 17px;
+  }
+
+  .catalog__item:hover .catalog__item-content,
+  .catalog__item:focus .catalog__item-content,
+  .catalog__item:focus-within .catalog__item-content {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .catalog__item:hover .catalog__link,
+  .catalog__item:focus .catalog__link,
+  .catalog__item:focus-within .catalog__link {
+    margin-top: -7px;
+    padding-bottom: 10px;
   }
 
   .form__content {
@@ -2672,8 +2735,12 @@ html {
     gap: 32px;
   }
 
+  .form__description br {
+    display: block;
+  }
+
   .form__description h2 {
-    margin-bottom: 11px;
+    margin-bottom: 10px;
     font-size: 24px;
     line-height: 32px;
     text-align: center;
@@ -2696,9 +2763,6 @@ html {
 
   .form__wrapper {
     width: 100%;
-    -webkit-transform: translateX(-1px);
-    -ms-transform: translateX(-1px);
-    transform: translateX(-1px);
     padding: 34px 30px 40px;
   }
 
@@ -2750,13 +2814,17 @@ html {
     padding-right: 0;
   }
 
+  .contacts__item--adress svg {
+    margin-top: 5px;
+  }
+
   .footer__navigation {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 37px;
   }
 
   .footer__logo-link svg {
@@ -2775,6 +2843,10 @@ html {
     grid-template-columns: 1fr;
     gap: 11px;
     margin-bottom: 22px;
+  }
+
+  .footer__item {
+    max-width: 100%;
   }
 
   .footer__social-list {
