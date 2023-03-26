@@ -31,6 +31,7 @@
       width: 89%;
       height: 100vh;
       background-color: $color-alice-blue;
+      overflow-y: scroll;
 
       .header__button {
         top: 13px;
