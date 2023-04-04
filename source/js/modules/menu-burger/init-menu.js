@@ -1,33 +1,38 @@
-const menuButtons = document.querySelectorAll('[data-menu-button]');
+const menuButton = document.querySelector('[data-menu-button]');
+const menuClosers = document.querySelectorAll('[data-menu-close]');
 const menuParent = document.querySelector('[data-menu]');
 
-const toggleMenu = () => {
-  menuParent.classList.toggle('open');
-  document.body.classList.toggle('scroll-lock');
+const openMenu = () => {
+  menuParent.classList.add('open');
+  document.body.classList.add('scroll-lock');
 };
 
-const onOverlayClick = (event) => {
-  if (event.target.closest('[data-menu]')) {
-    return;
-  }
-
-  document.body.removeEventListener('click', onOverlayClick, true);
-  toggleMenu();
+const closeMenu = () => {
+  menuParent.classList.remove('open');
+  document.body.classList.remove('scroll-lock');
 };
 
-const onMenuToggle = () => {
+const onMenu = () => {
   if (menuParent.classList.contains('open')) {
-    document.body.removeEventListener('click', onOverlayClick, true);
-    toggleMenu();
-    return;
+    closeMenu();
+  } else {
+    openMenu();
   }
-
-  document.body.addEventListener('click', onOverlayClick, true);
-  toggleMenu();
 };
+
+window.addEventListener('resize', () => {
+  let viewportWidth = window.innerWidth;
+  if (viewportWidth >= 768) {
+    if (menuParent.classList.contains('open')) {
+      menuParent.classList.remove('open');
+      document.body.classList.remove('scroll-lock');
+    }
+  }
+});
 
 const initMenu = () => {
-  menuButtons.forEach((button) => button.addEventListener('click', onMenuToggle));
+  menuButton.addEventListener('click', onMenu);
+  menuClosers.forEach((closer) => closer.addEventListener('click', closeMenu));
 };
 
 export {initMenu};

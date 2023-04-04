@@ -63,6 +63,22 @@
   }
 }
 
+.header.open + .header__overlay {
+  display: none;
+
+  @media (max-width: $mobile-width) {
+    z-index: 10;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 11%;
+    height: 100vh;
+    background-color: rgba(0, 43, 102, 0.5);
+    pointer-events: all;
+  }
+}
+
 .header__navigation {
   position: relative;
   display: flex;

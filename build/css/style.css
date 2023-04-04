@@ -1310,6 +1310,10 @@ html {
   background-color: transparent;
 }
 
+.header.open + .header__overlay {
+  display: none;
+}
+
 .header__navigation {
   position: relative;
   display: -webkit-box;
@@ -2560,6 +2564,18 @@ html {
 
   .header.open .header__link {
     color: #011c40;
+  }
+
+  .header.open + .header__overlay {
+    z-index: 10;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 11%;
+    height: 100vh;
+    background-color: rgba(0, 43, 102, 0.5);
+    pointer-events: all;
   }
 
   .header__navigation {
