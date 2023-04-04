@@ -124,7 +124,7 @@
 
 .catalog__item {
   position: relative;
-  height: 386px;
+  min-height: 386px;
   background-color: $color-tangaroa;
 
   img {
@@ -149,6 +149,9 @@
 
     .catalog__item-content {
       padding: 28px 25px 35px;
+      min-height: 386px;
+      display: flex;
+      flex-direction: column;
 
       @media (max-width: $tablet-width) {
         padding-left: 35px;
