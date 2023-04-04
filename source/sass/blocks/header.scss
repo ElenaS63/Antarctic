@@ -5,25 +5,6 @@
   background-color: transparent;
 
   @media (max-width: $mobile-width) {
-    &.nojs {
-      position: relative;
-      background-color: $color-tangaroa;
-
-      .header__button {
-        display: none;
-      }
-
-      .header__navigation {
-        flex-direction: column;
-      }
-
-      .header__list {
-        display: block;
-        width: 100%;
-        text-align: center;
-      }
-    }
-
     &.open {
       position: fixed;
       top: 0;
@@ -128,7 +109,8 @@
 .header__list {
   display: grid;
   grid-template-columns: repeat(4, max-content);
-  gap: 33px;
+  column-gap: 33px;
+  row-gap: 5px;
   margin: 0;
   padding: 0;
   list-style-type: none;

@@ -151,12 +151,7 @@
   font-size: 14px;
   line-height: 21px;
   color: $color-tangaroa;
-
-  &.is-invalid {
-    span {
-      color: $color-torch-red;
-    }
-  }
+  position: relative;
 
   input:not([type="checkbox"]) {
     width: 100%;
@@ -239,6 +234,22 @@
 
     @media (max-width: $mobile-width) {
       padding-top: 8px;
+    }
+  }
+
+  &.is-invalid {
+    input {
+      border: 1px solid $color-torch-red;
+    }
+
+    span {
+      color: $color-torch-red;
+    }
+
+    .input-message {
+      position: absolute;
+      left: 0;
+      top: calc(100% + 1px);
     }
   }
 }

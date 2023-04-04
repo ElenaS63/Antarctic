@@ -19,7 +19,6 @@ const onMenuToggle = () => {
   if (menuParent.classList.contains('open')) {
     document.body.removeEventListener('click', onOverlayClick, true);
     toggleMenu();
-
     return;
   }
 
@@ -28,7 +27,6 @@ const onMenuToggle = () => {
 };
 
 const initMenu = () => {
-  menuParent.classList.remove('nojs');
   menuButtons.forEach((button) => button.addEventListener('click', onMenuToggle));
 };
 
