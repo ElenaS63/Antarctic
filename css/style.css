@@ -2217,7 +2217,11 @@ html {
   }
 */
 
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
+  .promo__description-wrapper {
+    padding-left: 150px;
+  }
+
   .catalog__list {
     -ms-grid-columns: (1fr)[3];
     grid-template-columns: repeat(3, 1fr);
