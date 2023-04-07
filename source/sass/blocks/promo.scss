@@ -33,6 +33,10 @@
   color: $color-alice-blue;
   text-shadow: 0 4px 4px $color-silver;
 
+  @media (max-width: $small-desktop-width) {
+    padding-left: 150px;
+  }
+
   @media (max-width: $tablet-width) {
     padding-top: 267px;
     padding-bottom: 276px;
